@@ -1,17 +1,21 @@
 function hasTargetSum(array, target) {
   // Write your algorithm here
+  for (let i = 0; i < array.length; i++) {
+    for (let j = i + 1; j < array.length; j++) {
+      if (array[i] + array[j] === target) {
+        return true;
+      }
+    }
+  }
+  return false;
 }
 
-/* 
-  Write the Big O time complexity of your function here
-*/
 
-/* 
-  Add your pseudocode here
-*/
 
 /*
   Add written explanation of your solution here
+  Iterate twice over the element in question using stacked loops.
+  Check whether the total of an input is equal to the sum of another input and the target, and return true if so.
 */
 
 // You can run `node index.js` to view these console logs
